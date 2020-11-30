@@ -1,0 +1,71 @@
+1.  How to compile your program (i.e. javac *.java)
+
+
+javac *.java
+
+
+2. Which file includes the main-method
+
+
+Main.java
+
+
+3. Any assumptions you have made when implementing the assignment 
+
+
+Jeg antar at input er en rettet asyklisk graf.
+
+
+4.Any peculiarities about your implementation 
+
+
+5. The status of your delivery (what works and what does not) 
+
+
+Jeg tror alt er riktig. Jeg fikset alt og nå kjører den som den skal.
+
+
+6. Give credit if your code is heavily influenced by some source (e.g. teaching material)
+
+
+
+Complexity and theoretical analysis 
+
+
+1. What is the time complexity of your solution?  You must explain the stated complexity. If you have a different complexity for each problem, you need to discuss them separately.
+
+Kompleksitet er O(|V|^2 + VE).
+
+Jeg går gjennom (løkke) node som ligger i while løkke og der gir V ganger, også går jeg i den påfølgende løkke og det gir O(V), går jeg til den påfølgende løkke og det gir O(V*E). Derfor har vi O(|V|^2 + VE) kompleksitet.
+
+Hvis n er antall tasks f.eks. Jeg går gjennom (løkkene) nodene som ligger while løkke og det gir O(n^2), også går jeg i den påfølgende løkke og det gir O(n), går jeg til den påfølgende løkke og det gir O(n*|E|). O(n^2+n+n*E). Derfor har vi O(n^2+ nE) kompleksitet.
+
+-----
+
+I LesFraFil.java:
+
+LesFraFil() → O(n)
+loopTasks() → O(TaskGenerator.loopTasks()) → O(n^3)
+sort() → O(TaskGenerator.sort())-->O(n^2)
+
+I TaskGenerator.java:
+
+update()--> O(n) den metoden fyller opp hele grafen
+loop()--> O(n) DFS ved hjelp av metode for loopTasks()
+loopTasks(n*loop)-->(n^2)
+printSort()-->O(|V|^2 + VE)
+addTask()-->O(1)
+
+Task.java som det meste er konstant. 
+
+
+ 2. What requirements are there for the input graph in order for the project to be successfully planned? Please put the discussion in the light of graf theoretical properties. 
+
+
+Grafen må være rettet.
+
+
+3.  What kind of the graph algorithms did you use in your implementation?
+
+
+DFS og topologisk sortering.

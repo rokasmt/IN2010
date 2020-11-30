@@ -1,0 +1,16 @@
+14
+
+1   get-paperwork                       14280  1        0
+2   call-contractor                     4      1        1       0
+3   clean-yard                          215902 3        1       0
+4   build-foundation                    32134  2        2       3       0
+5   build-wall-support                  41232  4        4       0
+6   lay-electrical-cables               142    1        4       0
+7   call-electrician                    15     1        4       0
+8   install-electrical-gate-opener      41245  2        5       7       10      0
+9   build-walls                         6127   4        5       0
+10  add-gate                            54322  3        9       0
+11  build-stairs                        4325   2        5       0
+12  add-2nd-floor                       121478 4        11      0
+13  isolate-room                        1242   3        12      9       0
+14  furnish-appartment                  54320  2        13      0

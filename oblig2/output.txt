@@ -1,0 +1,415 @@
+buildgarage.txt
+Time: 0
+	Starting: 1
+	Current Staff: 1
+
+Time: 14280
+	Finished: 1
+	Starting: 2
+	Starting: 3
+	Current Staff: 4
+
+Time: 14284
+	Finished: 2
+	Current Staff: 3
+
+Time: 230182
+	Finished: 3
+	Starting: 4
+	Current Staff: 2
+
+Time: 262316
+	Finished: 4
+	Starting: 5
+	Starting: 6
+	Starting: 7
+	Current Staff: 6
+
+Time: 262331
+	Finished: 7
+	Current Staff: 5
+
+Time: 262458
+	Finished: 6
+	Current Staff: 4
+
+Time: 303548
+	Finished: 5
+	Starting: 9
+	Starting: 11
+	Current Staff: 6
+
+Time: 307873
+	Finished: 11
+	Starting: 12
+	Current Staff: 8
+
+Time: 309675
+	Finished: 9
+	Starting: 10
+	Current Staff: 7
+
+Time: 363997
+	Finished: 10
+	Starting: 8
+	Current Staff: 6
+
+Time: 405242
+	Finished: 8
+	Current Staff: 4
+
+Time: 429351
+	Finished: 12
+	Starting: 13
+	Current Staff: 3
+
+Time: 430593
+	Finished: 13
+	Starting: 14
+	Current Staff: 2
+
+Time: 484913
+	Finished: 14
+
+**** Shortest possible project execution is 484913 ****
+ ID  	Name   				  Time Needed		ManPower  	Earliest Start Latest Start  	Slack	Edges
+  1	get-paperwork                           14280              1                0               0               0	2 3 
+  2	call-contractor                           4              1            14280          230178          215898	4 
+  3	clean-yard                              215902              3            14280           14280               0	4 
+  4	build-foundation                        32134              2           230182          230182               0	5 6 7 
+  5	build-wall-support                      41232              4           262316          262316               0	8 9 11 
+  6	lay-electrical-cables                   142              1           262316          484771          222455	
+  7	call-electrician                         15              1           262316          363982          101666	8 
+  8	install-electrical-gate-opener          41245              2           363997          443668           79671	
+  9	build-walls                             6127              4           303548          303548               0	10 13 
+ 10	add-gate                                54322              3           309675          309675               0	8 
+ 11	build-stairs                            4325              2           303548          303548               0	12 
+ 12	add-2nd-floor                           121478              4           307873          307873               0	13 
+ 13	isolate-room                            1242              3           429351          429351               0	14 
+ 14	furnish-appartment                      54320              2           430593          430593               0	
+
+---
+buildhouse1.txt
+Time: 0
+	Starting: 5
+	Current Staff: 2
+
+Time: 4
+	Finished: 5
+	Starting: 1
+	Starting: 6
+	Current Staff: 4
+
+Time: 6
+	Finished: 6
+	Current Staff: 2
+
+Time: 8
+	Finished: 1
+	Starting: 2
+	Current Staff: 4
+
+Time: 14
+	Finished: 2
+	Starting: 3
+	Starting: 4
+	Starting: 7
+	Current Staff: 7
+
+Time: 15
+	Finished: 3
+	Finished: 4
+	Current Staff: 2
+
+Time: 18
+	Finished: 7
+	Starting: 8
+	Current Staff: 4
+
+Time: 22
+	Finished: 8
+
+**** Shortest possible project execution is 22 ****
+ ID  	Name   				  Time Needed		ManPower  	Earliest Start Latest Start  	Slack	Edges
+  1	Build-walls                               4              2                4               4               0	2 3 
+  2	Build-roofs                               6              4                8               8               0	3 4 7 
+  3	Put-on-wallpapers                         1              2               14              17               3	8 
+  4	Put-on-tiles                              1              3               14              21               7	
+  5	Build-foundation                          4              2                0               0               0	1 6 
+  6	Make-floor                                2              2                4              12               8	7 
+  7	Put-carpet-floor                          4              2               14              14               0	8 
+  8	Move-in                                   4              4               18              18               0
+----
+buildhouse2.txt
+
+Running in loop
+
+Call loop from loopTasks
+loop: List: []
+Call loop(Task@61bbe9ba,[Task@610455d6])
+loop: List: [Task@610455d6]
+Call loop(Task@511d50c0,[Task@610455d6, Task@61bbe9ba])
+loop: List: [Task@610455d6, Task@61bbe9ba]
+Call loop(Task@60e53b93,[Task@610455d6, Task@61bbe9ba, Task@511d50c0])
+loop: List: [Task@610455d6, Task@61bbe9ba, Task@511d50c0]
+list after return:[Task@610455d6, Task@61bbe9ba, Task@511d50c0]
+list after return:[Task@610455d6, Task@61bbe9ba]
+Call loop(Task@5e2de80c,[Task@610455d6, Task@61bbe9ba])
+loop: List: [Task@610455d6, Task@61bbe9ba]
+list after return:[Task@610455d6, Task@61bbe9ba]
+Call loop(Task@1d44bcfa,[Task@610455d6, Task@61bbe9ba])
+loop: List: [Task@610455d6, Task@61bbe9ba]
+Call loop(Task@266474c2,[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa])
+loop: List: [Task@610455d6, Task@61bbe9ba, Task@1d44bcfa]
+Call loop(Task@610455d6,[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2])
+loop: List: [Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2]
+list after return:[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2, Task@610455d6]
+list after return:[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2, Task@610455d6]
+list after return:[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2, Task@610455d6]
+list after return:[Task@610455d6, Task@61bbe9ba, Task@1d44bcfa, Task@266474c2, Task@610455d6]
+
+
+1-->2-->7-->6-->1-->
+
+---
+
+examplefigure.txt
+
+Time: 0
+	Starting: 1
+	Starting: 2
+	Current Staff: 6
+
+Time: 3
+	Finished: 1
+	Current Staff: 2
+
+Time: 5
+	Finished: 2
+	Starting: 3
+	Starting: 4
+	Current Staff: 6
+
+Time: 6
+	Finished: 3
+	Starting: 5
+	Current Staff: 7
+
+Time: 7
+	Finished: 4
+	Starting: 6
+	Current Staff: 7
+
+Time: 10
+	Finished: 5
+	Current Staff: 4
+
+Time: 15
+	Finished: 6
+	Starting: 7
+	Starting: 8
+	Current Staff: 5
+
+Time: 16
+	Finished: 8
+	Current Staff: 2
+
+Time: 18
+	Finished: 7
+
+**** Shortest possible project execution is 18 ****
+ ID  	Name   				  Time Needed		ManPower  	Earliest Start Latest Start  	Slack	Edges
+  1	1                                         3              4                0               2               2	3 
+  2	2                                         5              2                0               0               0	3 4 
+  3	3                                         1              2                5               5               0	5 6 
+  4	4                                         2              4                5               5               0	6 
+  5	5                                         4              3                6              11               5	7 
+  6	6                                         8              4                7               7               0	7 8 
+  7	7                                         3              2               15              15               0	
+  8	8                                         1              3               15              17               2	
+
+
+----
+buildrail.txt
+Time: 0
+	Starting: 9
+	Current Staff: 10
+
+Time: 3
+	Finished: 9
+	Starting: 10
+	Starting: 11
+	Starting: 12
+	Starting: 14
+	Starting: 16
+	Starting: 17
+	Current Staff: 56
+
+Time: 4
+	Finished: 11
+	Starting: 18
+	Starting: 19
+	Starting: 20
+	Current Staff: 64
+
+Time: 5
+	Finished: 10
+	Starting: 2
+	Current Staff: 70
+
+Time: 12
+	Finished: 2
+	Current Staff: 60
+
+Time: 16
+	Finished: 20
+	Starting: 23
+	Current Staff: 61
+
+Time: 28
+	Finished: 14
+	Starting: 15
+	Current Staff: 61
+
+Time: 29
+	Finished: 19
+	Current Staff: 57
+
+Time: 33
+	Finished: 12
+	Starting: 13
+	Current Staff: 57
+
+Time: 38
+	Finished: 16
+	Current Staff: 45
+
+Time: 44
+	Finished: 18
+	Starting: 21
+	Current Staff: 46
+
+Time: 46
+	Finished: 23
+	is Starting: 26
+	Current Staff: 48
+
+Time: 48
+	Finished: 15
+	Finished: 17
+	Starting: 22
+	Current Staff: 29
+
+Time: 51
+	Finished: 13
+	Starting: 8
+	Current Staff: 24
+
+Time: 59
+	Finished: 21
+	Starting: 24
+	Current Staff: 26
+
+Time: 63
+	Finished: 8
+	Starting: 3
+	Current Staff: 29
+
+Time: 64
+	Finished: 3
+	Finished: 22
+	Starting: 25
+	Current Staff: 21
+
+Time: 66
+	Finished: 26
+	Current Staff: 14
+
+Time: 119
+	Finished: 24
+	Starting: 4
+	Current Staff: 13
+
+Time: 124
+	Finished: 25
+	Starting: 5
+	Starting: 27
+	Current Staff: 22
+
+Time: 134
+	Finished: 4
+	Current Staff: 16
+
+Time: 136
+	Finished: 5
+	Current Staff: 10
+
+Time: 149
+	Finished: 27
+	Starting: 28
+	Starting: 29
+	Current Staff: 20
+
+Time: 179
+	Finished: 28
+	Current Staff: 10
+
+Time: 186
+	Finished: 29
+	Starting: 1
+	Starting: 6
+	Starting: 7
+	Starting: 30
+	Current Staff: 29
+
+Time: 204
+	Finished: 7
+	Current Staff: 23
+
+Time: 206
+	Finished: 1
+	Finished: 30
+	Starting: 31
+	Current Staff: 13
+
+Time: 213
+	Finished: 6
+	Current Staff: 7
+
+Time: 218
+	Finished: 31
+
+**** Shortest possible project execution is 218 ****
+ ID  	Name   				  Time Needed		ManPower  	Earliest Start Latest Start  	Slack	Edges
+  1	Install-pavement                         20             10              186             198              12	
+  2	Install-railing                           7             10                5             211             206	
+  3	Install-ticketmachine                     1             10               63             217             154	
+  4	Paint-tower-1-with-arch                  15              6              119             203              84	
+  5	Paint-tower-2                            12              6              124             206              82	
+  6	Paint-trusses                            27              6              186             191               5	
+  7	Paint-cables-and-rods                    18              6              186             200              14	
+  8	Put-lane-tunnel-and-intersection         12              7               51              51               0	3 31 
+  9	Setup-barrack                             3             10                0               0               0	10 11 12 14 16 17 
+ 10	Prepare-storage                           2              4                3               3               0	2 
+ 11	Rig-ramspace-reinforcing                  1              4                3               3               0	18 19 20 
+ 12	Build-tunnel                             30             12                3               3               0	13 
+ 13	Clean-tunnel                             18             12               33              33               0	8 
+ 14	Build-intersection                       25             12                3               3               0	15 
+ 15	Clean-intersection                       20             12               28              31               3	8 
+ 16	Build-towerfoundation-1                  35             12                3               9               6	21 
+ 17	Build-towerfoundation-2                  45             12                3               3               0	22 
+ 18	Make-armouring-tower-1                   40              4                4               4               0	21 
+ 19	Make-armouring-tower-2                   25              4                4              23              19	22 
+ 20	Make-armouring-arch                      12              4                4               4               0	23 
+ 21	Encase-and-armour-tower-1                15              5               44              44               0	24 
+ 22	Encase-and-armour-tower-2                16              5               48              48               0	25 
+ 23	Encase-and-armour-arch                   30              5               16              16               0	26 
+ 24	Cast-tower-1                             60              7               59              59               0	4 27 
+ 25	Cast-tower-2                             60              7               64              64               0	5 27 
+ 26	Cast-arch                                20              7               46             186             140	31 
+ 27	Stretch-two-maincables                   25             10              124             124               0	28 29 
+ 28	Build-truss-1-with-rods                  30             10              149             156               7	1 6 7 30 
+ 29	Build-truss-2-with-rods                  37             10              149             149               0	1 6 7 30 
+ 30	Cast-lane-on-truss                       20              7              186             186               0	31 
+ 31	Polish-lane-on-arch                      12              7              206             206               0
+
