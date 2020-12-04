@@ -3,6 +3,9 @@
 Mandatory assignments
 
 --oblig0
+
 --oblig1
+
 --oblig2
+
 --oblig3
